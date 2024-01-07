@@ -1,5 +1,8 @@
 ---
-# front matter tells Jekyll to process Liquid
+# This is Front Matter, a snippet of YAML placed between two triple-dashed lines at the start of a file.
+# Front Matter tells Jekyll to process Liquid and output predefined variables as content on a page.
+my_number :5
+title: Tin Leelavimolsilp
 ---
 
 <!DOCTYPE html>
@@ -8,11 +11,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Tin Leelavimolsilp">
-        <title>Tin Leelavimolsilp</title>
+        <title>{{ page.title }}</title>
     </head>
     <body>
         <h1>{{ "Hello World!" | downcase }}</h1>
         <p>I am learning Jekyll on GitHub Pages.</p>
-        <p>Suppose to show title here: {{ page.title }}</p>
+        <p>Suppose to show title value here: {{ page.title }}</p>
+        <p>Suppose to show my_number value here: {{ page.my_number }}</p>
     </body>
 </html>
